@@ -1,0 +1,53 @@
+class Human(player):
+    def __init__(self, money):
+        self.money = 20
+
+    def display_info(self):
+        print(
+        'Your money$ 20'
+        )
+
+class Bike(object):
+    def __init__(self, price, max_speed, min_speed, material, speed):
+        self.price = price
+        self.max_speed = max_speed
+        self.min_speed = min_speed
+        self.material = material
+        self.speed = 0
+        self.miles = 0
+
+    def display_info(self):
+        print(
+        'Price is $' + str(self.price) + " max_Speed: " + str(self.max_speed) + " min_speed: " + str(self.min_speed) + " miles: " + str(self.miles) + " material: " + str(self.material) + " brake: " + str(self.brake) + " speed: " + str(self.speed))
+
+    def buy(self):
+        print ('Buy')
+        human.money -= 20
+        return human
+
+    def ride(self):
+        print ('Riding')
+        self.miles += 10
+        self.speed += 5
+        return self
+
+    def brake(self):
+        print ('Brake')
+        self.speed = 0
+        return self
+
+
+    def reverse(self):
+        print ('Reversing')
+        if self.miles >= 5:
+            self.miles -= 5
+            self.speed -= 5
+        return self
+
+
+Bike1 = Bike(20, 45, 5 )
+Bike1.ride().ride().ride().reverse().reverse()
+Bike1.display_info()
+Bike1.brake()
+Bike1.buy()
+
